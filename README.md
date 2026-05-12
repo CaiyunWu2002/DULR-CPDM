@@ -1,12 +1,5 @@
 # DULR-CPDM
 Authors: Caiyun Wu, Yidong Luo, Chenggong Li, Junchao Zhang*, Buge Liang
-
-Affiliations:
-- School of Automation, Central South University, Changsha 410083, China
-- Hunan Provincial Key Laboratory of Optic-Electronic Intelligent Measurement and Control, Changsha 410083, China
-- School of Engineering, Westlake University, Hangzhou 310030, China
-
-* Corresponding author: Junchao Zhang (junchaozhang@csu.edu.cn)
   
 Abstract:
 
