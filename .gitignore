@@ -1,0 +1,6 @@
+.idea/
+debug/
+dataset/
+pretraind_net/
+*.pyc
+__pycache__/

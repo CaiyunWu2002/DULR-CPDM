@@ -1,0 +1,50 @@
+{
+  "task": "test"
+  ,
+  "gpu_ids": [
+    0
+  ],
+  "path": {
+    "root": "debug/denoising",
+
+    "pretrained_netG": "pretraindnet\\"
+ },
+  "data": {
+    "img_type": "img",
+    "real": "false",
+    "type": "polar",
+    "n_channels": 12,
+    "train": {},
+    "test": {
+     "dataroot_H": "dataset\\test\\PIDSR_aug",
+      "save_path":"debug\\denoising\\test"
+    }
+  },
+  "netG": {
+    "d_size": 3,
+    "fix_d": false,
+    "n_iter": 2,
+    "in_nc": 12,
+    "s_lameda": 1,
+    "freeze_modules": [],
+
+    "nc_x": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "nb": 3 
+
+  },
+  "train": {
+    "reload_broadcast": false,
+    "G_optimizer_lr": 0.0002,
+     "G_scheduler_milestones": [700,900],
+    "G_scheduler_gamma": 0.5,
+    "weights": [0.4,0.6]
+  },
+  "test": {
+    "visualize": true
+  }
+}

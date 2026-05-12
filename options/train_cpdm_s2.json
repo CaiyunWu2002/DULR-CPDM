@@ -1,0 +1,64 @@
+
+{
+  "task": "train"
+  ,
+  "gpu_ids": [
+    0
+  ],
+  "path": {
+    "root": "debug/denoising",
+    "pretrained_netG": "pretraindnet\\",
+    "models":  "'debug\\denoising\\train\\models\\checkpoints'"
+
+  },
+  "data": {
+    "img_type": "img",
+    "type": "polar",
+    "real": "false",
+    "data_format": "png",
+    "n_channels": 12,
+    "train": {
+      "dataroot_H": "dataset\\train\\big",
+      "H_size":64,
+      "num_workers":4,
+      "batch_size":16
+    },
+    "test": {
+     "dataroot_H": "dataset\\test\\example",
+      "save_path":"debug\\denoising\\train"
+    }
+  },
+  "netG": {
+    "d_size": 3,
+    "n_iter":2,
+    "in_nc": 12,
+    "nc_x": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "nb": 3,
+    "s_lamed": 1,
+    "freeze_modules": []
+
+  },
+ "train": {
+   "total_epochs":1000,
+   "checkpoint_save_interval":860,
+   "manual_seed": 2,
+   "reload_broadcast": false,
+   "G_optimizer_lr": 9.800e-05,
+   "G_scheduler_milestones": [120, 140,180],
+   "weights": [0.4,0.6],
+   "G_scheduler_gamma": 0.7,
+   "checkpoint_test":430,
+   "checkpoint_savemodel":430,
+   "checkpoint_log":430,
+   "checkpoint_saveimage":430
+ },
+  
+  "test": {
+    "visualize": true
+  }
+}
