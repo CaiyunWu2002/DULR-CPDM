@@ -7,10 +7,19 @@ Affiliations:
 - School of Engineering, Westlake University, Hangzhou 310030, China
 
 * Corresponding author: Junchao Zhang (junchaozhang@csu.edu.cn)
-Abstract
+  
+Abstract:
+
 The commonly used polarization images are obtained through snapshot polarization cameras, yet full-resolution images can only be achieved by performing color polarization demosaicking (CPDM). However, existing model-based algorithms face issues of excessive image smoothing and low computational efficiency due to their reliance on manual prior regularization and iterative solving. In contrast, deep learning methods often suffer from limited interpretability due to their black-box nature. To address these
 challenges, we propose DULR-CPDM, a deep unfolding convolutional sparse coding (CSC) model that employs network-learned regularization for CPDM. This framework replaces handcrafted priors with two specialized network modules: a U-Net architecture that imposes adaptive constraints on sparse coding coefficients, and a Restormer-based network with transposed attention for dictionary atom refinement. The joint model-data-driven approach not only enhances the computational efficiency of the CSC model but also improves the network’s interpretability and generalization capability. Experimental results demonstrate that, compared to existing algorithms, DULR-CPDM offers significant advantages in recovering the Degree of Liner Polarization (DoLP) information and reducing the Angle of Polarization (AoP) artifacts in both indoor and outdoor test scenarios.
+
 Keywords: color polarization demosaicking; color polarization imaging; sparse coding; deep unfolding.
+
+![DULR-CPDM](f1.png)
+
+DULR-CPDM offers significant advantages in DoLP texture preservation and AoP artifact reduction. 
+(a) Imaging principle of a color DoFP camera integrating micro-lenses, a Bayer filter, and a micro-polarizer to capture color and polarization data in a single snapshot, followed by the CPDM result. 
+(b) Comparisons with IGRI, PIDSR, and NLCSR are shown. "GT" denotes the corresponding ground-truth values.
 
 ## Features
 
